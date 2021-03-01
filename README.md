@@ -47,6 +47,7 @@ python3 patent_classification.py
 ```
 (Jupyter notebook version is also available: codes/data_preproc.ipynb)
 
+Because of size limitation of repo, the based pre-trained Bert is not uploaded here. You need to download the BERT model (uncased_L-12_H-768_A-12) for pytorch inadvance, and put in "/train_models/bert" folder before running the model.
 
 Trained Models
 -----------
