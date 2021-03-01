@@ -13,6 +13,13 @@ pip install numpy pytorch scipy pandas pytorch_pretrained_bert fastai pandas tqd
 ```
 (You can use anaconda or other tools depending on your Python installation.)
 
+Dataset
+-----------
+You should download one or a group of patent xml files from https://bulkdata.uspto.gov for this project.
+The current version of the code works with "ipg210105.xml", that can be downloaded from:
+https://bulkdata.uspto.gov/data/patent/grant/redbook/fulltext/2021/
+After downloading, you should unzip it and put in "/data" folder.
+(Because of its large size it is not included in this repository.)
 
 Experiments
 -----------
