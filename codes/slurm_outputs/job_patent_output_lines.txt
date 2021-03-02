@@ -1,0 +1,395 @@
+[=== Module anaconda/3 loaded ===]
+03/01/2021 09:59:20 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+03/01/2021 09:59:20 - INFO - pytorch_pretrained_bert.tokenization -   loading vocabulary file ../trained_models/bert/uncased_L-12_H-768_A-12/vocab.txt
+03/01/2021 09:59:20 - INFO - __main__ -   LOOKING AT ../data/train.csv
+03/01/2021 09:59:20 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 09:59:20 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 09:59:23 - INFO - pytorch_pretrained_bert.modeling -   Weights of BertForMultiLabelSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+03/01/2021 09:59:23 - INFO - pytorch_pretrained_bert.modeling -   Weights from pretrained model not used in BertForMultiLabelSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+03/01/2021 09:59:42 - INFO - __main__ -   ***** Running training *****
+03/01/2021 09:59:42 - INFO - __main__ -     Num examples = 5583
+03/01/2021 09:59:42 - INFO - __main__ -     Batch size = 32
+03/01/2021 09:59:42 - INFO - __main__ -     Num steps = 697
+/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/pytorch_pretrained_bert/optimization.py:275: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370193460/work/torch/csrc/utils/python_arg_parser.cpp:882.)
+  next_m.mul_(beta1).add_(1 - beta1, grad)
+03/01/2021 10:00:08 - INFO - __main__ -   Loss after epoc 0.37558944608483996
+03/01/2021 10:00:08 - INFO - __main__ -   Eval after epoc 1
+03/01/2021 10:00:09 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 10:00:09 - INFO - __main__ -     Num examples = 697
+03/01/2021 10:00:09 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:00:10 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 10:00:10 - INFO - __main__ -     eval_accuracy = 0.9027977044476327
+03/01/2021 10:00:10 - INFO - __main__ -     eval_loss = 0.23873213814063507
+03/01/2021 10:00:10 - INFO - __main__ -     roc_auc = {0: 0.923900805044193, 1: 0.8439719583064293, 2: 0.9753474275576581, 3: 0.6729393055923668, 4: 0.8255846717385178, 5: 0.9238618524332809, 6: 0.9085778967545773, 7: 0.8752591747874766, 'micro': 0.9327266692160018}
+03/01/2021 10:00:35 - INFO - __main__ -   Loss after epoc 0.20290304337229048
+03/01/2021 10:00:35 - INFO - __main__ -   Eval after epoc 2
+03/01/2021 10:00:36 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 10:00:36 - INFO - __main__ -     Num examples = 697
+03/01/2021 10:00:36 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:00:37 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 10:00:37 - INFO - __main__ -     eval_accuracy = 0.9137374461979914
+03/01/2021 10:00:37 - INFO - __main__ -     eval_loss = 0.2193882939490405
+03/01/2021 10:00:37 - INFO - __main__ -     roc_auc = {0: 0.9396920565219838, 1: 0.8764259139685762, 2: 0.9805588409225311, 3: 0.726080042406573, 4: 0.8292476754015216, 5: 0.9436682365253793, 6: 0.9218719016458456, 7: 0.895440251572327, 'micro': 0.9435434421157498}
+03/01/2021 10:01:01 - INFO - __main__ -   Loss after epoc 0.14730097557817187
+03/01/2021 10:01:01 - INFO - __main__ -   Eval after epoc 3
+03/01/2021 10:01:02 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 10:01:02 - INFO - __main__ -     Num examples = 697
+03/01/2021 10:01:02 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:01:03 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 10:01:03 - INFO - __main__ -     eval_accuracy = 0.9149928263988523
+03/01/2021 10:01:03 - INFO - __main__ -     eval_loss = 0.2179752696644176
+03/01/2021 10:01:03 - INFO - __main__ -     roc_auc = {0: 0.9412402184315712, 1: 0.8779479137840913, 2: 0.9794500295683027, 3: 0.7668963689371853, 4: 0.8387573964497042, 5: 0.94720041862899, 6: 0.9251768127437373, 7: 0.8933322966341836, 'micro': 0.945564577441231}
+03/01/2021 10:01:28 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+03/01/2021 10:01:28 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+03/01/2021 10:01:28 - INFO - __main__ -   Loss after epoc 0.12633838053260532
+03/01/2021 10:01:28 - INFO - __main__ -   Eval after epoc 4
+03/01/2021 10:01:29 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 10:01:29 - INFO - __main__ -     Num examples = 697
+03/01/2021 10:01:29 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:01:30 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 10:01:30 - INFO - __main__ -     eval_accuracy = 0.9148134863701578
+03/01/2021 10:01:30 - INFO - __main__ -     eval_loss = 0.21673236245458777
+03/01/2021 10:01:30 - INFO - __main__ -     roc_auc = {0: 0.9410150312447222, 1: 0.8807920548534883, 2: 0.979357628622117, 3: 0.7830638749006096, 4: 0.8399549168779937, 5: 0.947985347985348, 6: 0.9250859276885451, 7: 0.8926843596654916, 'micro': 0.9463673376249297}
+03/01/2021 10:01:32 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 10:01:32 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 10:01:35 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 10:01:35 - INFO - __main__ -     Num examples = 697
+03/01/2021 10:01:35 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:01:36 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 10:01:36 - INFO - __main__ -     eval_accuracy = 0.9148134863701578
+03/01/2021 10:01:36 - INFO - __main__ -     eval_loss = 0.21673236245458777
+03/01/2021 10:01:36 - INFO - __main__ -     roc_auc = {0: 0.9410150312447222, 1: 0.8807920548534883, 2: 0.979357628622117, 3: 0.7830638749006096, 4: 0.8399549168779937, 5: 0.947985347985348, 6: 0.9250859276885451, 7: 0.8926843596654916, 'micro': 0.9463673376249297}
+03/01/2021 10:01:37 - INFO - __main__ -   ***** Running prediction *****
+03/01/2021 10:01:37 - INFO - __main__ -     Num examples = 697
+03/01/2021 10:01:37 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:01:38 - INFO - __main__ -   ***** Test results *****
+03/01/2021 10:01:38 - INFO - __main__ -     roc_auc = {0: 0.9389970990468296, 1: 0.8641703000769428, 2: 0.9714704650188521, 3: 0.8760806916426513, 4: 0.8375862790211253, 5: 0.9136579371133147, 6: 0.8999385361639921, 7: 0.901575174495378, 'micro': 0.9412726510467846}
+03/01/2021 10:01:38 - INFO - __main__ -     test_accuracy = 0.9131994261119082
+03/01/2021 10:01:38 - INFO - __main__ -     test_loss = 0.22493470392443918
+Traceback (most recent call last):
+  File "patent_classification.py", line 997, in <module>
+    result = predict(model, DATA_PATH)
+  File "patent_classification.py", line 991, in predict
+    predicted_values = pd.merge(pd.DataFrame(input_data), pd.DataFrame(all_logits, columns=label_list), left_index=True, right_index=True)
+NameError: name 'input_data' is not defined
+[=== Module anaconda/3 loaded ===]
+03/01/2021 10:15:46 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+03/01/2021 10:15:46 - INFO - pytorch_pretrained_bert.tokenization -   loading vocabulary file ../trained_models/bert/uncased_L-12_H-768_A-12/vocab.txt
+03/01/2021 10:15:46 - INFO - __main__ -   LOOKING AT ../data/train.csv
+03/01/2021 10:15:46 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 10:15:46 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 10:15:50 - INFO - pytorch_pretrained_bert.modeling -   Weights of BertForMultiLabelSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+03/01/2021 10:15:50 - INFO - pytorch_pretrained_bert.modeling -   Weights from pretrained model not used in BertForMultiLabelSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+03/01/2021 10:16:06 - INFO - __main__ -   ***** Running training *****
+03/01/2021 10:16:06 - INFO - __main__ -     Num examples = 5583
+03/01/2021 10:16:06 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:16:06 - INFO - __main__ -     Num steps = 697
+Traceback (most recent call last):
+  File "patent_classification.py", line 879, in <module>
+    fit()
+  File "patent_classification.py", line 847, in fit
+    loss = model(input_ids, segment_ids, input_mask, label_ids)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "patent_classification.py", line 159, in forward
+    _, pooled_output = self.bert(input_ids, token_type_ids, attention_mask, output_all_encoded_layers=False)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 730, in forward
+    embedding_output = self.embeddings(input_ids, token_type_ids)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 273, in forward
+    embeddings = self.dropout(embeddings)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/functional.py", line 983, in dropout
+    else _VF.dropout(input, p, training))
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+[=== Module anaconda/3 loaded ===]
+03/01/2021 10:31:53 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+03/01/2021 10:31:53 - INFO - pytorch_pretrained_bert.tokenization -   loading vocabulary file ../trained_models/bert/uncased_L-12_H-768_A-12/vocab.txt
+03/01/2021 10:31:53 - INFO - __main__ -   LOOKING AT ../data/train.csv
+03/01/2021 10:31:53 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 10:31:53 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 10:31:57 - INFO - pytorch_pretrained_bert.modeling -   Weights of BertForMultiLabelSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+03/01/2021 10:31:57 - INFO - pytorch_pretrained_bert.modeling -   Weights from pretrained model not used in BertForMultiLabelSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+03/01/2021 10:32:13 - INFO - __main__ -   ***** Running training *****
+03/01/2021 10:32:13 - INFO - __main__ -     Num examples = 5583
+03/01/2021 10:32:13 - INFO - __main__ -     Batch size = 32
+03/01/2021 10:32:13 - INFO - __main__ -     Num steps = 697
+Traceback (most recent call last):
+  File "patent_classification.py", line 879, in <module>
+    fit()
+  File "patent_classification.py", line 847, in fit
+    loss = model(input_ids, segment_ids, input_mask, label_ids)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "patent_classification.py", line 159, in forward
+    _, pooled_output = self.bert(input_ids, token_type_ids, attention_mask, output_all_encoded_layers=False)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 730, in forward
+    embedding_output = self.embeddings(input_ids, token_type_ids)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 273, in forward
+    embeddings = self.dropout(embeddings)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/torch/nn/functional.py", line 983, in dropout
+    else _VF.dropout(input, p, training))
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+[=== Module anaconda/3 loaded ===]
+03/01/2021 11:17:10 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+03/01/2021 11:17:10 - INFO - pytorch_pretrained_bert.tokenization -   loading vocabulary file ../trained_models/bert/uncased_L-12_H-768_A-12/vocab.txt
+03/01/2021 11:17:10 - INFO - __main__ -   LOOKING AT ../data/train.csv
+03/01/2021 11:17:10 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 11:17:10 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 11:17:13 - INFO - pytorch_pretrained_bert.modeling -   Weights of BertForMultiLabelSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+03/01/2021 11:17:13 - INFO - pytorch_pretrained_bert.modeling -   Weights from pretrained model not used in BertForMultiLabelSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+03/01/2021 11:17:28 - INFO - __main__ -   ***** Running training *****
+03/01/2021 11:17:28 - INFO - __main__ -     Num examples = 5583
+03/01/2021 11:17:28 - INFO - __main__ -     Batch size = 32
+03/01/2021 11:17:28 - INFO - __main__ -     Num steps = 697
+/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/pytorch_pretrained_bert/optimization.py:275: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370193460/work/torch/csrc/utils/python_arg_parser.cpp:882.)
+  next_m.mul_(beta1).add_(1 - beta1, grad)
+03/01/2021 11:17:53 - INFO - __main__ -   Loss after epoc 0.37558944608483996
+03/01/2021 11:17:53 - INFO - __main__ -   Eval after epoc 1
+03/01/2021 11:17:54 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 11:17:54 - INFO - __main__ -     Num examples = 697
+03/01/2021 11:17:54 - INFO - __main__ -     Batch size = 32
+03/01/2021 11:17:55 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 11:17:55 - INFO - __main__ -     eval_accuracy = 0.9027977044476327
+03/01/2021 11:17:55 - INFO - __main__ -     eval_loss = 0.23873213814063507
+03/01/2021 11:17:55 - INFO - __main__ -     roc_auc = {0: 0.923900805044193, 1: 0.8439719583064293, 2: 0.9753474275576581, 3: 0.6729393055923668, 4: 0.8255846717385178, 5: 0.9238618524332809, 6: 0.9085778967545773, 7: 0.8752591747874766, 'micro': 0.9327266692160018}
+03/01/2021 11:18:19 - INFO - __main__ -   Loss after epoc 0.20290304337229048
+03/01/2021 11:18:19 - INFO - __main__ -   Eval after epoc 2
+03/01/2021 11:18:20 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 11:18:20 - INFO - __main__ -     Num examples = 697
+03/01/2021 11:18:20 - INFO - __main__ -     Batch size = 32
+03/01/2021 11:18:21 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 11:18:21 - INFO - __main__ -     eval_accuracy = 0.9137374461979914
+03/01/2021 11:18:21 - INFO - __main__ -     eval_loss = 0.2193882939490405
+03/01/2021 11:18:21 - INFO - __main__ -     roc_auc = {0: 0.9396920565219838, 1: 0.8764259139685762, 2: 0.9805588409225311, 3: 0.726080042406573, 4: 0.8292476754015216, 5: 0.9436682365253793, 6: 0.9218719016458456, 7: 0.895440251572327, 'micro': 0.9435434421157498}
+03/01/2021 11:18:45 - INFO - __main__ -   Loss after epoc 0.14730097557817187
+03/01/2021 11:18:45 - INFO - __main__ -   Eval after epoc 3
+03/01/2021 11:18:46 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 11:18:46 - INFO - __main__ -     Num examples = 697
+03/01/2021 11:18:46 - INFO - __main__ -     Batch size = 32
+03/01/2021 11:18:47 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 11:18:47 - INFO - __main__ -     eval_accuracy = 0.9149928263988523
+03/01/2021 11:18:47 - INFO - __main__ -     eval_loss = 0.2179752696644176
+03/01/2021 11:18:47 - INFO - __main__ -     roc_auc = {0: 0.9412402184315712, 1: 0.8779479137840913, 2: 0.9794500295683027, 3: 0.7668963689371853, 4: 0.8387573964497042, 5: 0.94720041862899, 6: 0.9251768127437373, 7: 0.8933322966341836, 'micro': 0.945564577441231}
+03/01/2021 11:19:11 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+03/01/2021 11:19:11 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+03/01/2021 11:19:11 - INFO - __main__ -   Loss after epoc 0.12633838053260532
+03/01/2021 11:19:11 - INFO - __main__ -   Eval after epoc 4
+03/01/2021 11:19:13 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 11:19:13 - INFO - __main__ -     Num examples = 697
+03/01/2021 11:19:13 - INFO - __main__ -     Batch size = 32
+03/01/2021 11:19:13 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 11:19:13 - INFO - __main__ -     eval_accuracy = 0.9148134863701578
+03/01/2021 11:19:13 - INFO - __main__ -     eval_loss = 0.21673236245458777
+03/01/2021 11:19:13 - INFO - __main__ -     roc_auc = {0: 0.9410150312447222, 1: 0.8807920548534883, 2: 0.979357628622117, 3: 0.7830638749006096, 4: 0.8399549168779937, 5: 0.947985347985348, 6: 0.9250859276885451, 7: 0.8926843596654916, 'micro': 0.9463673376249297}
+03/01/2021 11:19:15 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 11:19:15 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 11:19:19 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 11:19:19 - INFO - __main__ -     Num examples = 697
+03/01/2021 11:19:19 - INFO - __main__ -     Batch size = 32
+03/01/2021 11:19:20 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 11:19:20 - INFO - __main__ -     eval_accuracy = 0.9148134863701578
+03/01/2021 11:19:20 - INFO - __main__ -     eval_loss = 0.21673236245458777
+03/01/2021 11:19:20 - INFO - __main__ -     roc_auc = {0: 0.9410150312447222, 1: 0.8807920548534883, 2: 0.979357628622117, 3: 0.7830638749006096, 4: 0.8399549168779937, 5: 0.947985347985348, 6: 0.9250859276885451, 7: 0.8926843596654916, 'micro': 0.9463673376249297}
+03/01/2021 11:19:21 - INFO - __main__ -   ***** Running prediction *****
+03/01/2021 11:19:21 - INFO - __main__ -     Num examples = 697
+03/01/2021 11:19:21 - INFO - __main__ -     Batch size = 32
+03/01/2021 11:19:22 - INFO - __main__ -   ***** Test results *****
+03/01/2021 11:19:22 - INFO - __main__ -     roc_auc = {0: 0.9389970990468296, 1: 0.8641703000769428, 2: 0.9714704650188521, 3: 0.8760806916426513, 4: 0.8375862790211253, 5: 0.9136579371133147, 6: 0.8999385361639921, 7: 0.901575174495378, 'micro': 0.9412726510467846}
+03/01/2021 11:19:22 - INFO - __main__ -     test_accuracy = 0.9131994261119082
+03/01/2021 11:19:22 - INFO - __main__ -     test_loss = 0.22493470392443918
+[=== Module anaconda/3 loaded ===]
+03/01/2021 12:30:10 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+03/01/2021 12:30:11 - INFO - pytorch_pretrained_bert.tokenization -   loading vocabulary file ../trained_models/bert/uncased_L-12_H-768_A-12/vocab.txt
+03/01/2021 12:30:11 - INFO - __main__ -   LOOKING AT ../data/train.csv
+03/01/2021 12:30:11 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 12:30:11 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 12:30:14 - INFO - pytorch_pretrained_bert.modeling -   Weights of BertForMultiLabelSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+03/01/2021 12:30:14 - INFO - pytorch_pretrained_bert.modeling -   Weights from pretrained model not used in BertForMultiLabelSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+03/01/2021 12:30:30 - INFO - __main__ -   ***** Running training *****
+03/01/2021 12:30:30 - INFO - __main__ -     Num examples = 5583
+03/01/2021 12:30:30 - INFO - __main__ -     Batch size = 32
+03/01/2021 12:30:30 - INFO - __main__ -     Num steps = 697
+/home/mila/s/samieeso/.conda/envs/CondaEnv/lib/python3.6/site-packages/pytorch_pretrained_bert/optimization.py:275: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370193460/work/torch/csrc/utils/python_arg_parser.cpp:882.)
+  next_m.mul_(beta1).add_(1 - beta1, grad)
+03/01/2021 12:31:24 - INFO - __main__ -   Loss after epoc 0.36397333673068455
+03/01/2021 12:31:24 - INFO - __main__ -   Eval after epoc 1
+03/01/2021 12:31:25 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 12:31:25 - INFO - __main__ -     Num examples = 697
+03/01/2021 12:31:25 - INFO - __main__ -     Batch size = 32
+03/01/2021 12:31:29 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 12:31:29 - INFO - __main__ -     eval_accuracy = 0.9069225251076041
+03/01/2021 12:31:29 - INFO - __main__ -     eval_loss = 0.2350989431142807
+03/01/2021 12:31:29 - INFO - __main__ -     roc_auc = {0: 0.9220430107526881, 1: 0.8601912492697474, 2: 0.9772878474275577, 3: 0.7116353034720381, 4: 0.7781065088757396, 5: 0.9014652014652016, 6: 0.9228138013087448, 7: 0.8906282396848435, 'micro': 0.9345168114848625}
+03/01/2021 12:32:22 - INFO - __main__ -   Loss after epoc 0.19137826255389623
+03/01/2021 12:32:22 - INFO - __main__ -   Eval after epoc 2
+03/01/2021 12:32:24 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 12:32:24 - INFO - __main__ -     Num examples = 697
+03/01/2021 12:32:24 - INFO - __main__ -     Batch size = 32
+03/01/2021 12:32:27 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 12:32:27 - INFO - __main__ -     eval_accuracy = 0.9214490674318508
+03/01/2021 12:32:27 - INFO - __main__ -     eval_loss = 0.20687476206909527
+03/01/2021 12:32:27 - INFO - __main__ -     roc_auc = {0: 0.9478550920452627, 1: 0.8804230852012421, 2: 0.9816861324659965, 3: 0.7252849191624702, 4: 0.8607354184277262, 5: 0.9432496075353217, 6: 0.9339761385418732, 7: 0.9123730043541364, 'micro': 0.9497612748228568}
+03/01/2021 12:33:21 - INFO - __main__ -   Loss after epoc 0.13758529497044428
+03/01/2021 12:33:21 - INFO - __main__ -   Eval after epoc 3
+03/01/2021 12:33:22 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 12:33:22 - INFO - __main__ -     Num examples = 697
+03/01/2021 12:33:22 - INFO - __main__ -     Batch size = 32
+03/01/2021 12:33:26 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 12:33:26 - INFO - __main__ -     eval_accuracy = 0.9232424677187948
+03/01/2021 12:33:26 - INFO - __main__ -     eval_loss = 0.2042315717447888
+03/01/2021 12:33:26 - INFO - __main__ -     roc_auc = {0: 0.9486854697967685, 1: 0.8786089844110322, 2: 0.9815752513305737, 3: 0.7820037105751392, 4: 0.8778529163144548, 5: 0.9454997383568812, 6: 0.9375950161940643, 7: 0.9125630658649526, 'micro': 0.9520082268899642}
+03/01/2021 12:34:19 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+03/01/2021 12:34:20 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+03/01/2021 12:34:20 - INFO - __main__ -   Loss after epoc 0.11763584847961153
+03/01/2021 12:34:20 - INFO - __main__ -   Eval after epoc 4
+03/01/2021 12:34:21 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 12:34:21 - INFO - __main__ -     Num examples = 697
+03/01/2021 12:34:21 - INFO - __main__ -     Batch size = 32
+03/01/2021 12:34:24 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 12:34:24 - INFO - __main__ -     eval_accuracy = 0.9234218077474893
+03/01/2021 12:34:24 - INFO - __main__ -     eval_loss = 0.20408504727211865
+03/01/2021 12:34:24 - INFO - __main__ -     roc_auc = {0: 0.9485165794066318, 1: 0.8819912062232881, 2: 0.9810393258426966, 3: 0.7972435727537768, 4: 0.8825021132713441, 5: 0.9470172684458399, 6: 0.9372314759732963, 7: 0.9124334784712144, 'micro': 0.9526977551831628}
+03/01/2021 12:34:26 - INFO - pytorch_pretrained_bert.modeling -   loading archive file ../trained_models/bert/uncased_L-12_H-768_A-12 from cache at ../trained_models/bert/uncased_L-12_H-768_A-12
+03/01/2021 12:34:26 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+03/01/2021 12:34:30 - INFO - __main__ -   ***** Running evaluation *****
+03/01/2021 12:34:30 - INFO - __main__ -     Num examples = 697
+03/01/2021 12:34:30 - INFO - __main__ -     Batch size = 32
+03/01/2021 12:34:33 - INFO - __main__ -   ***** Eval results *****
+03/01/2021 12:34:33 - INFO - __main__ -     eval_accuracy = 0.9234218077474893
+03/01/2021 12:34:33 - INFO - __main__ -     eval_loss = 0.20408504727211865
+03/01/2021 12:34:33 - INFO - __main__ -     roc_auc = {0: 0.9485165794066318, 1: 0.8819912062232881, 2: 0.9810393258426966, 3: 0.7972435727537768, 4: 0.8825021132713441, 5: 0.9470172684458399, 6: 0.9372314759732963, 7: 0.9124334784712144, 'micro': 0.9526977551831628}
+03/01/2021 12:34:34 - INFO - __main__ -   ***** Running prediction *****
+03/01/2021 12:34:34 - INFO - __main__ -     Num examples = 697
+03/01/2021 12:34:34 - INFO - __main__ -     Batch size = 32
+03/01/2021 12:34:38 - INFO - __main__ -   ***** Test results *****
+03/01/2021 12:34:38 - INFO - __main__ -     roc_auc = {0: 0.952313855504904, 1: 0.8851372146704283, 2: 0.9762882279011311, 3: 0.8583093179634967, 4: 0.8269190545910897, 5: 0.9143359606746334, 6: 0.907903917073657, 7: 0.9038346109653411, 'micro': 0.9463328846626269}
+03/01/2021 12:34:38 - INFO - __main__ -     test_accuracy = 0.918400286944046
+03/01/2021 12:34:38 - INFO - __main__ -     test_loss = 0.21833772957324982

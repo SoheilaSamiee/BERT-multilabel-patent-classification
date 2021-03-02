@@ -1,0 +1,48 @@
+HBox(children=(HTML(value='Epoch'), FloatProgress(value=0.0, max=4.0), HTML(value='')))
+HBox(children=(HTML(value='Iteration'), FloatProgress(value=0.0, max=175.0), HTML(value='')))
+
+HBox(children=(HTML(value='Iteration'), FloatProgress(value=0.0, max=175.0), HTML(value='')))
+
+HBox(children=(HTML(value='Iteration'), FloatProgress(value=0.0, max=175.0), HTML(value='')))
+
+HBox(children=(HTML(value='Iteration'), FloatProgress(value=0.0, max=175.0), HTML(value='')))
+
+
+HBox(children=(HTML(value='Prediction Iteration'), FloatProgress(value=0.0, max=22.0), HTML(value='')))
+
+{'test_loss': 0.22323812273415652, 'test_accuracy': 0.9153515064562411, 'roc_auc': {0: 0.9455794999309297, 1: 0.8757758399589638, 2: 0.9688940092165899, 3: 0.8938520653218059, 4: 0.8402007948128006, 5: 0.9211797609966945, 6: 0.9029452805741055, 7: 0.8981152784208811, 'micro': 0.9429129433821924}}
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Mon Mar  1 09:44:24 2021
+Driver Version                            : 450.102.04
+CUDA Version                              : 11.0
+
+Attached GPUs                             : 1
+GPU 00000000:27:00.0
+    Accounting Mode                       : Disabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+Mon Mar  1 09:44:25 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.102.04   Driver Version: 450.102.04   CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Quadro RTX 8000     Off  | 00000000:27:00.0 Off |                  Off |
+| 32%   55C    P0    39W / 260W |      0MiB / 48601MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
