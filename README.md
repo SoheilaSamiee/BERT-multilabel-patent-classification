@@ -26,11 +26,24 @@ python3 parse_patent.py
 cd codes
 python3 data_prepocessing.py
 ```
-4. Fine tuning the model and doing the multi-label classification task:
+5. Downloading pre-trained Bert Model (bert-base-uncased) for pytorch, and unzip it to:
+```
+/trained_models/bert
+```
+7. Fine tuning the model and doing the multi-label classification task:
 ```
 cd codes
 python3 patent_classification.py
 ```
+8. Fine tuned model will be saved in:
+```
+/trained_models/bert/fine_tuned_models
+```
+9. Output of validation and test will be saved in:
+```
+/Output
+```
+
 
 
 More details for each step are provided in the following.
