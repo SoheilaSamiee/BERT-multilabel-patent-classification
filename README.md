@@ -13,6 +13,28 @@ pip install numpy pytorch scipy pandas pytorch_pretrained_bert fastai pandas tqd
 ```
 (You can use anaconda or other tools depending on your Python installation.)
 
+Steps
+-----------
+1. Downloading dataset
+2. Parsing the patent file
+```
+cd codes
+python3 parse_patent.py
+```
+3. Data preprocessing and dataset spilitting:
+```
+cd codes
+python3 data_prepocessing.py
+```
+4. Fine tuning the model and doing the multi-label classification task:
+```
+cd codes
+python3 patent_classification.py
+```
+
+
+More details for each step are provided in the following.
+
 Dataset
 -----------
 You should download one or a group of patent xml files from https://bulkdata.uspto.gov for this project.
