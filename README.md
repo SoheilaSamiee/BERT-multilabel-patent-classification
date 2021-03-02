@@ -58,6 +58,7 @@ trained_models/bert/fine_tuned_models
 ```
 (Due to size limit of github, I could not upload the fine tuned model -- but it will be built if you run the code -- I will upload it with git lfs soon!)
 
+
 Detailed Steps
 -----------
 1. Downloading dataset
@@ -73,7 +74,7 @@ python3 parse_patent.py
 cd codes
 python3 data_prepocessing.py
 ```
-5. Downloading pre-trained Bert Model (bert-base-uncased) for pytorch, and unzip it to:
+5. Downloading pre-trained Bert Model (bert-base-uncased) for pytorch (link: https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin), and unzip it to:
 ```
 /trained_models/bert
 ```
