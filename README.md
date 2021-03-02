@@ -60,7 +60,7 @@ Experiments
 -----------
 
 Run models:
-
+ 
 ```
 cd codes
 python3 patent_classification.py
