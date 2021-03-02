@@ -2,7 +2,6 @@
 Multilabel classification of patents (based on their highest level IPC classification) using BERT
 
 
-
 Requirements
 ------------
 
@@ -13,40 +12,6 @@ pip install numpy pytorch scipy pandas pytorch_pretrained_bert fastai pandas tqd
 ```
 (You can use anaconda or other tools depending on your Python installation.)
 
-Steps
------------
-1. Downloading dataset
-2. Parsing the patent file
-```
-cd codes
-python3 parse_patent.py
-```
-3. Data preprocessing and dataset spilitting:
-```
-cd codes
-python3 data_prepocessing.py
-```
-5. Downloading pre-trained Bert Model (bert-base-uncased) for pytorch, and unzip it to:
-```
-/trained_models/bert
-```
-7. Fine tuning the model and doing the multi-label classification task:
-```
-cd codes
-python3 patent_classification.py
-```
-8. Fine tuned model will be saved in:
-```
-/trained_models/bert/fine_tuned_models
-```
-9. Output of validation and test will be saved in:
-```
-/Output
-```
-
-
-
-More details for each step are provided in the following.
 
 Dataset
 -----------
@@ -82,7 +47,7 @@ python3 patent_classification.py
 ```
 (Jupyter notebook version is also available: codes/data_preproc.ipynb)
 
-Because of size limitation of repo, the based pre-trained Bert is not uploaded here. You need to download the BERT model (uncased_L-12_H-768_A-12) for pytorch inadvance, and put in "/train_models/bert" folder before running the model.
+Because of size limitation of repo, the based pre-trained Bert is not uploaded here. You need to download the BERT model (uncased_L-12_H-768_A-12: pytorch_model.bin) for pytorch inadvance, and put in "/train_models/bert" folder before running the model.
 
 Trained Models
 -----------
@@ -91,3 +56,38 @@ The fine-tuned BERT model for Patent classification can be downloaded from:
 ```
 trained_models/bert/fine_tuned_models
 ```
+(Due to size limit of github, I could not upload the fine tuned model -- but it will be built if you run the code -- I will upload it with git lfs soon!)
+
+Detailed Steps
+-----------
+1. Downloading dataset
+See bellow for more details about the dataset.
+
+3. Parsing the patent file
+```
+cd codes
+python3 parse_patent.py
+```
+3. Data preprocessing and dataset spilitting:
+```
+cd codes
+python3 data_prepocessing.py
+```
+5. Downloading pre-trained Bert Model (bert-base-uncased) for pytorch, and unzip it to:
+```
+/trained_models/bert
+```
+7. Fine tuning the model and doing the multi-label classification task:
+```
+cd codes
+python3 patent_classification.py
+```
+8. Fine tuned model will be saved in:
+```
+/trained_models/bert/fine_tuned_models
+```
+9. Output of validation and test will be saved in:
+```
+/Output
+```
+
